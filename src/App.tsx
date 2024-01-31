@@ -1,9 +1,9 @@
-import UseEffectEx from "./components/ex/UseEffectEx"
+import { UseMemoEx } from "./components/ex/UseMemoEx"
 
 function App() {
   return (
     <>
-      <UseEffectEx />
+      <UseMemoEx />
     </>
   )
 }
