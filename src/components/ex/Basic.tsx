@@ -19,37 +19,35 @@ type TodoTypes = {
 // key index를 쓰면 안되는 이유
 // 요소는 id는 고유 해야하며 추가 삭제가 발생시 reindexing 일어나면서 id 값이 변한다
 
-function App() {
+export const Basic = () => {
   const [todo, setTodo] = useState<TodoTypes[]>([
     { id: 1, title: "아침 먹기", completed: true },
     { id: 2, title: "점심 먹기", completed: false },
     { id: 3, title: "저녁 먹기", completed: false },
   ])
 
-  // const onPushData = () => {
-  //   setTodo([
-  //     ...todo,
-  //     { id: todo.length + 1, title: "저녁2 먹기", completed: false },
-  //   ])
-  // }
+  const onPushData = () => {
+    setTodo([
+      ...todo,
+      { id: todo.length + 1, title: "저녁2 먹기", completed: false },
+    ])
+  }
 
-  // const onUnshiftData = () => {
-  //   setTodo([
-  //     { id: todo.length + 1, title: "저녁2 먹기", completed: false },
-  //     ...todo,
-  //   ])
-  // }
+  const onUnshiftData = () => {
+    setTodo([
+      { id: todo.length + 1, title: "저녁2 먹기", completed: false },
+      ...todo,
+    ])
+  }
 
   return (
-    <>
+    <div>
       <div>{todo[0].title}</div>
       {todo.map((item) => (
         <div>{item.title}</div>
       ))}
       <button onClick={onPushData}>push</button>
       <button onClick={onUnshiftData}>unshift</button>
-    </>
+    </div>
   )
 }
-
-export default App
