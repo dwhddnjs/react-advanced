@@ -1,9 +1,10 @@
+import { UseCallbackEx } from "./components/ex/UseCallbackEx"
 import { UseMemoEx } from "./components/ex/UseMemoEx"
 
 function App() {
   return (
     <>
-      <UseMemoEx />
+      <UseCallbackEx />
     </>
   )
 }
